@@ -1,57 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Momo+Signature&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
 
-    <title>Crypto Landing page</title>
+    <!-- fontawsome cdn -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+              kanit: ["Kanit", "sans-seri"],
+              cursive: ["Momo Signature", "cursive"],
+              lora: ["Lora", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Crypto Landing Page</title>
   </head>
   <body>
-    <div class="container">
-      <section aria-label="navbar">
-        <nav class="navbar">
-          <div>
-            <img src="./assets/white-logo.png" alt="logo" class="logo" />
-          </div>
-          <div class="line"></div>
-          <div class="grow-list">
-            <ul class="list">
-              <li class="list-item">Apps</li>
-              <li class="list-item">DAO</li>
-              <li class="list-item">Technology</li>
-              <li class="list-item">Token</li>
-              <li class="list-item">Contributors</li>
-            </ul>
-          </div>
-          <div>
-            <button class="button-small">Buy 1 Token</button>
-          </div>
-        </nav>
-      </section>
-      <!-- Hero Section -->
-      <section aria-label="hero">
-        <div class="hero">
-          <h1 class="hero-heading">Lets build a better tomorrow, together.</h1>
-          <p class="hero-description">
-            Buy 1 Token. Join the DAO. Change the world
-          </p>
-          <button class="button-large">Request Early Access</button>
-        </div>
-      </section>
-    </div>
+    <main class="h-screen ">
+      <div class="bg-stone-600 relative h-full ">
+        <img
+          src="./assets/bg.png"
+          alt="img"
+          class="absolute w-full h-screen mix-blend-overlay"
+        />
+      </div>
+      <div class="w-full h-20 flex absolute top-0">
+        <h1 class="top-3 text-white px-10 lg:px-24 text-5xl font-bold font-kanit mt-5 xl:mt-2">
+          L <span class="-ml-6 text-5xl text-cyan-500 font-cursive">0</span>
+          <span class="-ml-7">g</span>0
+        </h1>
+       <div class="hidden xl:flex justify-between items-center flex-grow">
+         <ul class="flex text-white gap-6 font-poppins ml-36 items-center text-sm">
+          <li class="border-r-2 pr-6 py-2">Apps <i class="fa-solid fa-angle-down"></i></li>
+          <li>DAO</li>
+          <li>Technology</li>
+          <li>Token</li> 
+          <li>Contributors</li>
+        </ul>
+        <button class="mr-24 font-poppins bg-fuchsia-700 px-6 py-2 text-white rounded-md">Buy 1 Token</button>
+        
+       </div>
+       <div class="flex xl:hidden h-20 items-center text-stone-200 text-xl pr-10 flex-grow justify-end gap-6">
+        <i class="fa-solid fa-plane-up"></i>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+       </div>
+        <div class="px-10 lg:w-full flex flex-col gap-6 justify-center h-[600px] items-center  text-white absolute">
+        <h1 class="text-5xl lg:text-7xl font-kanit font-semibold lg:w-[700px] text-center">Let's build a better tomorrow, together.</h1>
+        <p class="font-poppins text-xl tracking-wide text-center">Buy 1 Token. Join the DAO. Change the world!</p>
+        <button class="font-poppins bg-fuchsia-700 px-6 py-2 text-white rounded-md font-semibold tracking-wide text-xl">Request Early Access</button>
+      </div>
+        
+      </div>
+     
+    </main>
   </body>
 </html>
